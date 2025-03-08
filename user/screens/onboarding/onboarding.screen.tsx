@@ -11,6 +11,7 @@ import { styles } from './styles';
 import { BackArrow } from "@/utils/icons";
 import { slides } from "@/configs/constants";
 import Images from "@/utils/images";
+import { router } from "expo-router";
 export default function OnBoardingScreen() {
   return (
     <View style={{ flex: 1, backgroundColor:color.whiteColor}}>
