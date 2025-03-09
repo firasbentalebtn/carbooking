@@ -27,32 +27,32 @@ export default function SelectInput({
 }: InputProps) {
   const { colors } = useTheme();
   return (
- <View>
-      {/* <Text style={[styles.title, { color: colors.text }]}>{title}</Text> */}<RNPickerSelect
-onValueChange={onValueChange}
-items={items}
-placeholder={{ label: "Select your  country", value: null }}
-style={{
-  inputIOS: {
-    ...styles.input,
-    backgroundColor: color.lightGray,
-    borderColor: colors.border,
-    height: windowHeight(39),
-  },
-  inputAndroid: {
-    ...styles.input,
-    backgroundColor: color.lightGray,
-    borderColor: colors.border,
-    height: windowHeight(39),
-    color: "#000",
-    
-  },
-}}
-value={value || "218"}
-/>
-{showWarning && <Text style={[styles.warning]}>{warning}</Text>}
- </View>
-  )
+    <View>
+      {/* <Text style={[styles.title, { color: colors.text }]}>{title}</Text> */}
+      <RNPickerSelect
+        onValueChange={onValueChange}
+        items={items}
+        placeholder={{ label: "Select your  country", value: null }}
+        style={{
+          inputIOS: {
+            ...styles.input,
+            backgroundColor: color.lightGray,
+            borderColor: colors.border,
+            height: windowHeight(39),
+          },
+          inputAndroid: {
+            ...styles.input,
+            backgroundColor: color.lightGray,
+            borderColor: colors.border,
+            height: windowHeight(39),
+            color: "#000",
+          },
+        }}
+        value={value || "218"}
+      />
+      {showWarning && <Text style={[styles.warning]}>{warning}</Text>}
+    </View>
+  );
 }
 const styles = StyleSheet.create({
   title: {
@@ -67,7 +67,6 @@ const styles = StyleSheet.create({
     height: windowHeight(30),
     color: color.secondaryFont,
     paddingHorizontal: 10,
-    
   },
   warning: {
     color: color.red,
